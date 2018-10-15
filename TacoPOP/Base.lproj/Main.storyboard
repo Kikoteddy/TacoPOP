@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="TacoPOP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFi-qK-OCh" customClass="HeaderView" customModule="TacoPOP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Taco-POP" translatesAutoresizingMaskIntoConstraints="NO" id="Vyc-nI-4tt">
+                                        <rect key="frame" x="74.5" y="19" width="225" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="hSO-tb-GXj"/>
+                                            <constraint firstAttribute="width" constant="225" id="rOv-vo-UH4"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Vyc-nI-4tt" firstAttribute="centerX" secondItem="qFi-qK-OCh" secondAttribute="centerX" id="KYf-Y4-JA6"/>
+                                    <constraint firstItem="Vyc-nI-4tt" firstAttribute="centerY" secondItem="qFi-qK-OCh" secondAttribute="centerY" id="MGL-vQ-Yas"/>
+                                    <constraint firstAttribute="height" constant="80" id="sfe-mL-PpI"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kDx-4a-Isd">
+                                <rect key="frame" x="16" y="100" width="343" height="547"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cvX-M3-NQn">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kDx-4a-Isd" firstAttribute="top" secondItem="qFi-qK-OCh" secondAttribute="bottom" constant="20" id="2Xk-ka-S6j"/>
+                            <constraint firstItem="qFi-qK-OCh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="G5a-bV-fnn"/>
+                            <constraint firstItem="kDx-4a-Isd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QSK-cD-Adx"/>
+                            <constraint firstItem="qFi-qK-OCh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V33-wS-mWR"/>
+                            <constraint firstItem="qFi-qK-OCh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VzJ-5O-62J"/>
+                            <constraint firstItem="kDx-4a-Isd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bLn-cP-HrP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kDx-4a-Isd" secondAttribute="bottom" constant="20" id="l5Q-o3-j6U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="kDx-4a-Isd" id="c82-Ok-7Qo"/>
+                        <outlet property="headerView" destination="qFi-qK-OCh" id="313-rf-Ddf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Taco-POP" width="490" height="100"/>
+    </resources>
+</document>
